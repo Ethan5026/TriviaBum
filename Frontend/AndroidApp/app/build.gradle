@@ -1,0 +1,99 @@
+plugins {
+    id("com.android.application")
+}
+
+android {
+    namespace = "com.example.androidapp"
+    compileSdk = 34
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    defaultConfig {
+        applicationId = "com.example.androidapp"
+        minSdk = 24
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug{
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+task javadoc(type: Javadoc) {
+
+    doFirst {
+        configurations.implementation
+                .filter { it.name.endsWith('.aar') }
+                .each { aar ->
+                    copy {
+                        from zipTree(aar)
+                        include "**/classes.jar"
+                        into "$buildDir/tmp/aarsToJars/${aar.name.replace('.aar', '')}/"
+                    }
+                }
+    }
+
+    configurations.implementation.setCanBeResolved(true)
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.implementation
+    classpath += fileTree(dir: "$buildDir/tmp/aarsToJars/")
+
+    android.applicationVariants.all { variant ->
+        if (variant.name == 'release') {
+            owner.classpath += variant.javaCompileProvider.get().classpath
+        }
+    }
+
+    destinationDir = file("${project.buildDir}/outputs/javadoc/")
+    options.memberLevel = JavadocMemberLevel.PRIVATE
+    failOnError false
+    exclude '**/BuildConfig.java'
+    exclude '**/R.java'
+
+}
+
+dependencies {
+
+    // Existing dependencies
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation("org.java-websocket:Java-WebSocket:1.5.2")
+
+    // JUnit for unit tests
+    testImplementation("junit:junit:4.13.2")
+
+    // Espresso for UI tests
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.1')
+    androidTestImplementation('androidx.test.espresso:espresso-intents:3.4.0')
+
+    // Mockito for unit testing and android specific testing
+    testImplementation('org.mockito:mockito-core:3.11.2')
+    androidTestImplementation('org.mockito:mockito-android:3.11.2')
+
+    // Additional support libraries for testing
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+}

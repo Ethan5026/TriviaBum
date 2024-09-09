@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ClansActivity">
+
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_gravity="start"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/clansTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clan Name"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: "
+        android:textSize="17sp"
+        android:layout_gravity="center" />
+    <Spinner
+        android:id="@+id/usernameSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/friends_user_array"
+        />
+    <Button
+        android:id="@+id/friendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="5dp"
+        android:text="Add Friend" />
+
+    <Button
+        android:id="@+id/friendStatsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="-46dp"
+        android:text="View Stats" />
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginTop="-46dp"
+        android:text="View Profile" />
+
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="400dp"
+        android:fillViewport="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/scrollView">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textSize="25dp"
+            android:id="@+id/chatText"/>
+    </ScrollView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatTextEntry"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Send" />
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:text=""
+        android:textSize="25dp"
+        android:layout_marginTop="-38dp"
+        android:layout_marginStart="115dp"
+        android:id="@+id/errorText"/>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

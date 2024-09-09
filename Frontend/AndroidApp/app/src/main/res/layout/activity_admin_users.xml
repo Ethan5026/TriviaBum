@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AdminActivity">
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="400sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="10sp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/backButton"
+        android:text="Welcome Admin" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/welcomeText"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/usersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="160px"
+        android:layout_below="@id/welcomeText"
+        android:text="Users" />
+
+    <Button
+        android:id="@+id/orgsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginStart="200px"
+        android:layout_toRightOf="@id/usersButton"
+        android:text="Clans" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/orgsButton"
+        android:background="?android:attr/listDivider" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider2"
+        android:fillViewport="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="20sp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/usernameTextEntry"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:hint="Enter new Username"
+                android:inputType="text"
+                android:autofillHints="false" />
+
+            <EditText
+                android:id="@+id/passwordTextEntry"
+                android:layout_below="@id/usernameTextEntry"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:hint="Enter new password"
+                android:inputType="textPassword"
+                android:autofillHints="false" />
+            <Button
+                android:id="@+id/newUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/passwordTextEntry"
+                android:text="Create New User" />
+
+            <CheckBox
+                android:id="@+id/isAdminCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usernameChangeTextEntry"
+                android:layout_marginStart="100sp"
+                android:layout_marginTop="10sp"
+                android:textSize="8pt"
+                android:text="Admin Privledges" />
+            <CheckBox
+                android:id="@+id/isQuestionMasterCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usernameChangeTextEntry"
+                android:layout_below="@id/isAdminCheckbox"
+                android:layout_marginStart="100sp"
+                android:layout_marginTop="11dp"
+                android:textSize="8pt"
+                android:text="Question Creator" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/newUserButton"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/selectionText"
+                android:layout_width="400sp"
+                android:layout_height="30sp"
+                android:textSize="25sp"
+                android:layout_marginTop="10sp"
+                android:layout_below="@id/divider3"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="Select User to Edit" />
+
+            <Spinner
+                android:id="@+id/configurations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/selectionText"
+                android:entries="@array/admin_array"
+                />
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/configurations"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/configurations"
+                android:layout_centerHorizontal="true"
+                android:text="Editting User: "
+                android:layout_marginTop="20dp"
+                android:textSize="25sp" />
+            <EditText
+                android:id="@+id/usernameChangeTextEntry"
+                android:layout_below="@id/divider4"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="Edit Username"
+                android:layout_marginTop="60dp"
+                android:inputType="text"
+                android:autofillHints="false" />
+            <Button
+                android:id="@+id/usernameChangeButton"
+                android:layout_below="@id/usernameChangeTextEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Username" />
+            <TextView
+                android:id="@+id/usernameChangeResponseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameChangeButton"
+                android:text=""
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/passwordChangeTextEntry"
+                android:layout_below="@id/usernameChangeResponseText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="Enter new password"
+                android:inputType="textPassword"
+                android:autofillHints="false" />
+            <Button
+                android:id="@+id/passwordChangeButton"
+                android:layout_below="@id/passwordChangeTextEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password" />
+            <TextView
+                android:id="@+id/passwordChangeResponseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/passwordChangeButton"
+                android:text=""
+                android:textSize="15sp" />
+            <EditText
+                android:id="@+id/orgChangeTextEntry"
+                android:layout_below="@id/passwordChangeResponseText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="Enter new Clan Code"
+                android:inputType="text"
+                android:autofillHints="false" />
+            <Button
+                android:id="@+id/orgChangeButton"
+                android:layout_below="@id/orgChangeTextEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Clan" />
+            <Button
+                android:id="@+id/orgLeaveButton"
+                android:layout_below="@id/orgChangeTextEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/orgChangeButton"
+                android:text="Leave Clan" />
+            <TextView
+                android:id="@+id/orgChangeResponseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orgLeaveButton"
+                android:text=""
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/changeIsAdminCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usernameChangeTextEntry"
+                android:layout_below="@id/usernameText"
+                android:layout_marginStart="100sp"
+                android:layout_marginTop="10sp"
+                android:textSize="8pt"
+                android:text="Admin Privledges" />
+            <CheckBox
+                android:id="@+id/changeIsQuestionMasterCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/usernameChangeTextEntry"
+                android:layout_below="@id/changeIsAdminCheckbox"
+                android:layout_marginStart="100sp"
+                android:textSize="8pt"
+
+                android:text="Question Creator" />
+            <Button
+                android:id="@+id/updatePriviledgesButton"
+                android:layout_below="@id/changeIsQuestionMasterCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130sp"
+                android:layout_toRightOf="@id/usernameChangeTextEntry"
+                android:text="Update" />
+
+            <Button
+                android:id="@+id/deleteUserButton"
+                android:layout_below="@id/orgChangeTextEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/orgLeaveButton"
+                android:text="Delete User" />
+
+            <TextView
+                android:id="@+id/responseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orgLeaveButton"
+                android:text=""
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

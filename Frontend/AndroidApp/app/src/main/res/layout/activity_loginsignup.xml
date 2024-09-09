@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginSignupActivity">
+
+    <Button
+        android:id="@+id/Back_Button1"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10sp"
+        android:text="Back"
+        android:layout_gravity="left"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="584dp"
+        tools:ignore="HardcodedText"
+        />
+
+    <TextView
+        android:id="@+id/Title_Text"
+        android:labelFor="@id/Title_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="TRIVIA BUM"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="112dp"
+        tools:ignore="HardcodedText"
+        />
+
+    <EditText
+        android:id="@+id/Username_Entry"
+        android:labelFor="@id/Username_Entry"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Username"
+        android:autofillHints="false"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="401dp"
+        tools:ignore="HardcodedText,TextFields"
+        />
+
+    <EditText
+        android:id="@+id/Password_Entry"
+        android:labelFor="@id/Password_Entry"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:autofillHints="false"
+        android:hint="Password"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="487dp"
+        tools:ignore="HardcodedText,TextFields"
+        />
+
+    <Button
+        android:id="@+id/Login_Button"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Login"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="584dp"
+        tools:ignore="HardcodedText"
+        />
+
+    <Button
+        android:id="@+id/Signup_Button"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Signup"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="HardcodedText"
+        />
+    <Button
+        android:id="@+id/guestButton"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Continue as Guest"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="HardcodedText"
+        />
+
+    <TextView
+        android:id="@+id/Error_Text"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/guestButton"
+        android:contentDescription="Logo"
+        android:src="@drawable/triviabum"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

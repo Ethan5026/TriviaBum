@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginLeft="10sp"
+        android:id="@+id/backButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Help Chat"
+        android:layout_below="@id/backButton"
+        android:textStyle="bold"
+        android:textSize="20pt"
+        android:id="@+id/title"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/title">
+
+        <TextView
+            android:id="@+id/socketText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="500dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/the_coversation_will_appear_here_n"
+            android:textSize="25sp" />
+
+
+    </ScrollView>
+    <EditText
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/scrollView"
+        android:hint="@string/message"
+        android:textSize="25sp"
+        android:id="@+id/socketMessage"
+        />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/socketMessage"
+        android:text="@string/send"
+        android:layout_marginStart="70dp"
+        android:id="@+id/sendButton" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/socketMessage"
+        android:layout_toRightOf="@id/sendButton"
+        android:layout_marginStart="20dp"
+        android:text="@string/connect"
+        android:id="@+id/connectButton" />
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidApp</string>
+    <string name="the_coversation_will_appear_here_n">The Coversation will appear here:\n</string>
+    <string name="username">username</string>
+    <string name="connect">Connect</string>
+    <string name="message">message</string>
+    <string name="send">Send</string>
+    <string name="fill_in_the_blank">Fill in the Blank</string>
+</resources>

@@ -1,0 +1,99 @@
+<!-- res/layout/activity_question_creator.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginBottom="10dp"
+        android:text="Back"
+        />
+
+    <EditText
+        android:id="@+id/editquestionid"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/backButton"
+        android:layout_marginBottom="5dp"
+        android:hint="Enter Question ID to Edit" />
+
+    <EditText
+        android:id="@+id/editTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/editquestionid"
+        android:hint="Enter Question" />
+
+    <EditText
+        android:id="@+id/editTextCorrect"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/editTextQuestion"
+        android:hint="Correct Answer" />
+
+    <EditText
+        android:id="@+id/editTextIncorrect1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/editTextCorrect"
+        android:hint="Incorrect Answer 1" />
+
+    <EditText
+        android:id="@+id/editTextIncorrect2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/editTextIncorrect1"
+        android:hint="Incorrect Answer 2" />
+
+    <EditText
+        android:id="@+id/editTextIncorrect3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/editTextIncorrect2"
+        android:hint="Incorrect Answer 3" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextIncorrect3"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="Create" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextIncorrect3"
+        android:layout_toRightOf="@id/buttonSave"
+        android:layout_marginLeft="10sp"
+        android:layout_marginBottom="5dp"
+        android:text="Enter Edit" />
+
+    <EditText
+        android:id="@+id/deleteId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginBottom="5dp"
+        android:hint="Enter Question ID" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleteId"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="Delete Question" />
+
+</RelativeLayout>

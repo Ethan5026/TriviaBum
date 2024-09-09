@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="Dark_Grey">#22211F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorYellow">#FFFF00</color>
+    <color name="colorPurple">#800080</color>
+    <color name="lavender">#E6E6FA</color>
+    <color name="plum">#DDA0DD</color>
+    <color name="orchid">#DA70D6</color>
+    <color name="violet">#EE82EE</color>
+    <color name="amethyst">#9966CC</color>
+    <color name="mediumOrchid">#BA55D3</color>
+    <color name="darkOrchid">#9932CC</color>
+    <color name="purple">#800080</color>
+    <color name="indigo">#4B0082</color>
+
+    <!-- Lighter Blue Shades -->
+    <color name="Baby_Blue">#89CFF0</color>
+    <color name="Sky_Blue">#87CEEB</color>
+    <color name="Light_Blue">#ADD8E6</color>
+    <color name="Powder_Blue">#B0E0E6</color>
+    <color name="Ice_Blue">#BCCED9</color>
+
+    <!-- Vibrant and Bright Blue Shades -->
+    <color name="Turquoise">#40E0D0</color>
+    <color name="Cyan">#00FFFF</color>
+    <color name="Aqua">#00FFFF</color> <!-- Same as Cyan -->
+    <color name="Cornflower_Blue">#6495ED</color>
+    <color name="Dodger_Blue">#1E90FF</color>
+
+    <!-- Standard Blue Shades -->
+    <color name="Blue_Crayola">#1F75FE</color>
+    <color name="Blue_Munsell">#0093AF</color>
+    <color name="Blue_NCS">#0087BD</color>
+    <color name="Blue_Pantone">#0018A8</color>
+    <color name="Blue_Pigment">#333399</color>
+
+    <!-- Deep Blue Shades -->
+    <color name="Royal_Blue">#4169E1</color>
+    <color name="Medium_Blue">#0000CD</color>
+    <color name="Navy_Blue">#000080</color>
+    <color name="Dark_Blue">#00008B</color>
+    <color name="Midnight_Blue">#191970</color>
+
+    <!-- Darker and Richer Blue Shades -->
+    <color name="Prussian_Blue">#003153</color>
+    <color name="Space_Blue">#1D2951</color>
+    <color name="Indigo_Dye">#00416A</color>
+    <color name="Yale_Blue">#0F4D92</color>
+    <color name="Egyptian_Blue">#1034A6</color>
+
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AdminActivity">
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="90sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:text="Back" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="400sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="10sp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/backButton"
+        android:text="Welcome Admin" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/welcomeText"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/usersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="75dp"
+        android:layout_below="@id/welcomeText"
+        android:text="Users" />
+
+    <Button
+        android:id="@+id/orgsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginStart="200px"
+        android:layout_toRightOf="@id/usersButton"
+        android:text="Clans" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/orgsButton"
+        android:background="?android:attr/listDivider" />
+
+    <EditText
+        android:id="@+id/clanTextEntry"
+        android:layout_below="@id/divider2"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="Enter new clan name"
+        android:inputType="text"
+        android:autofillHints="false" />
+
+    <Button
+        android:id="@+id/newClanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:textSize="15sp"
+        android:layout_below="@id/clanTextEntry"
+        android:text="Create New Clan" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/newClanButton"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/selectionText"
+        android:layout_width="400sp"
+        android:layout_height="30sp"
+        android:textSize="25sp"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/divider3"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:text="Select Clan to Edit" />
+
+    <Spinner
+        android:id="@+id/configurations"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/selectionText"
+        android:entries="@array/admin_user_array"
+        />
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/configurations"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/configurations"
+        android:layout_centerHorizontal="true"
+        android:text="Editing Clan: "
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/clanChangeTextEntry"
+        android:layout_below="@id/divider4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15sp"
+        android:hint="Edit Name"
+        android:inputType="text"
+        android:autofillHints="false" />
+    <Button
+        android:id="@+id/clanChangeButton"
+        android:layout_below="@id/clanChangeTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Clan Name" />
+    <Button
+        android:id="@+id/clanDeleteButton"
+        android:layout_below="@id/clanChangeTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/clanChangeButton"
+        android:text="Delete Clan" />
+
+    <TextView
+        android:id="@+id/responseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clanDeleteButton"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="20sp" />
+
+
+
+
+
+
+</RelativeLayout>

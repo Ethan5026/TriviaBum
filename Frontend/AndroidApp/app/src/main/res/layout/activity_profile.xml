@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:id="@+id/mainLayout">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/editProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/backButton"
+        android:text="Edit Profile"
+        android:layout_marginStart="180dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/main_msg_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/backButton"
+        android:textAlignment="center"
+        android:layout_gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/main_msg_txt"
+        android:background="?android:attr/listDivider" />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_msg_txt"
+        android:fillViewport="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/scrollView"
+        android:layout_marginTop="20sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/profile_image"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:paddingBottom="4dp"
+                android:layout_below="@id/main_msg_txt"
+                android:background="?android:attr/listDivider" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bio:"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textSize="25dp"
+                android:text=""
+                android:id="@+id/bioText"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:paddingBottom="4dp"
+                android:layout_below="@id/main_msg_txt"
+                android:background="?android:attr/listDivider" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends:"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textSize="25dp"
+                android:text=""
+                android:id="@+id/friendsText"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:paddingBottom="4dp"
+                android:layout_below="@id/main_msg_txt"
+                android:background="?android:attr/listDivider" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clan:"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textSize="25dp"
+                android:text=""
+                android:id="@+id/clanText"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:paddingBottom="4dp"
+                android:layout_below="@id/main_msg_txt"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/errorText"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

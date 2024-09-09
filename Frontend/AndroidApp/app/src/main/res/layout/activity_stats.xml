@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/myStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:text="My Stats" />
+
+    <TextView
+        android:id="@+id/statsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backButton"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="Statistics" />
+
+    <TextView
+        android:id="@+id/currentStreak"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/statsTitle"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="30dp"
+        android:text="Current Streak: "
+        android:background="#f52891cc"
+        android:textSize='20sp' />
+
+    <TextView
+        android:id="@+id/longestStreak"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/currentStreak"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:background="#f52891cc"
+        android:text="Longest Streak: "
+        android:textSize='20sp' />
+
+    <TextView
+        android:id="@+id/totalQuestions"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/longestStreak"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:background="#f52891cc"
+        android:text="Total Questions: "
+        android:textSize='20sp' />
+
+    <TextView
+        android:id="@+id/totalCorrect"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/totalQuestions"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:background="#f52891cc"
+        android:text="Total Correct: "
+        android:textSize='20sp' />
+
+    <TextView
+        android:id="@+id/correctRatio"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/totalCorrect"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:background="#f52891cc"
+        android:text="Correct Ratio: "
+        android:textSize='20sp' />
+    <TextView
+        android:id="@+id/friendsMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correctRatio"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="View Friend's Statistics"
+        android:textSize='15sp' />
+
+    <Spinner
+        android:id="@+id/friendSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/friendsMessage"
+        android:entries="@array/friends_user_array"
+        />
+    <Button
+        android:id="@+id/friendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/friendSpinner"
+        android:text="Load Friend's Stats" />
+
+    <TextView
+        android:id="@+id/errorBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_below="@id/friendButton"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>

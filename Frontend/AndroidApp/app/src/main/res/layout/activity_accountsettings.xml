@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AccountSettingsActivity">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        android:text="Delete Account" />
+
+    <TextView
+        android:id="@+id/accountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/backButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Account Settings"
+        android:textSize="30sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/accountTitle"
+        android:background="?android:attr/listDivider" />
+
+
+    <TextView
+        android:id="@+id/usernameChangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accountTitle"
+        android:layout_marginTop="10dp"
+        android:text="Username: "
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/usernameChangeTextEntry"
+        android:layout_below="@id/usernameChangeText"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="Enter new Username"
+        android:inputType="text"
+        android:autofillHints="false" />
+    <Button
+        android:id="@+id/usernameChangeButton"
+        android:layout_below="@id/usernameChangeTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Username" />
+    <TextView
+        android:id="@+id/usernameChangeResponseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameChangeButton"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/passwordChangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameChangeResponseText"
+        android:inputType = "text"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/passwordChangeTextEntry"
+        android:layout_below="@id/passwordChangeText"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="Enter new password"
+        android:inputType="textPassword"
+        android:autofillHints="false" />
+    <EditText
+        android:id="@+id/passwordChangeTextEntry2"
+        android:layout_below="@id/passwordChangeTextEntry"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="Re-enter password"
+        android:inputType="textPassword"
+        android:autofillHints="false" />
+    <Button
+        android:id="@+id/passwordChangeButton"
+        android:layout_below="@id/passwordChangeTextEntry2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password" />
+    <TextView
+        android:id="@+id/passwordChangeResponseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordChangeButton"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/orgChangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordChangeResponseText"
+        android:layout_marginTop="10dp"
+        android:text="Clan: "
+        android:textSize="20sp" />
+    <EditText
+        android:id="@+id/orgChangeTextEntry"
+        android:layout_below="@id/orgChangeText"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:hint="Enter new Clan Code"
+        android:inputType="text"
+        android:autofillHints="false" />
+    <Button
+        android:id="@+id/orgChangeButton"
+        android:layout_below="@id/orgChangeTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Clan" />
+    <Button
+        android:id="@+id/orgLeaveButton"
+        android:layout_below="@id/orgChangeTextEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Leave Clan" />
+    <TextView
+        android:id="@+id/orgChangeResponseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orgChangeButton"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_array">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+
+    <string-array name="genre_array">
+        <item>Random</item>
+        <item>Multiple Choice</item>
+        <item>Check Box</item>
+        <item>True or False</item>
+        <item>Fill in the Blank</item>
+    </string-array>
+</resources>

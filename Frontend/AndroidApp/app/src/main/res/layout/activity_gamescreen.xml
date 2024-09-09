@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/timerProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="400dp"
+        android:layout_height="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="@color/teal_200" />
+
+    <TextView
+        android:id="@+id/questionTextbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerProgressBar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10sp"
+        android:padding="16dp"
+        android:text="Trivia Question?"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ScoreBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerProgressBar"
+        android:textAlignment="center"
+        android:text="Score:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextFillBlank"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/questionTextbox"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Fill In Here"/>
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFillBlank"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Submit" />
+
+    <!-- Answer Choice Buttons -->
+    <Button
+        android:id="@+id/choice1Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTextbox"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Choice 1" />
+
+    <Button
+        android:id="@+id/choice2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choice1Button"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Choice 2" />
+
+    <Button
+        android:id="@+id/choice3Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choice2Button"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Choice 3" />
+
+    <Button
+        android:id="@+id/choice4Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choice3Button"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Choice 4" />
+
+    <!-- checkboxes questions -->
+
+    <CheckBox
+        android:id="@+id/checkboxOption1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 1"
+        android:layout_below="@id/questionTextbox"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxOption2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 2"
+        android:layout_below="@id/checkboxOption1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxOption3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 3"
+        android:layout_below="@id/checkboxOption2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkboxOption4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option 4"
+        android:layout_below="@id/checkboxOption3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/checkboxOption4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!--Powerups related items-->
+
+
+    <TextView
+        android:id="@+id/powerupsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Powerups"
+        />
+
+    <!-- Powerups Buttons with images and counts -->
+    <RelativeLayout
+        android:id="@+id/powerupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitBtn"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Freeze Time Powerup -->
+        <FrameLayout
+            android:id="@+id/frameFreeze"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/freeze"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_freeze_powerup"/>
+
+            <TextView
+                android:id="@+id/freezecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:padding="4dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <!-- Double Points Powerup -->
+        <FrameLayout
+            android:id="@+id/frameDoublePoints"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@id/frameFreeze"
+            android:layout_marginStart="10dp">
+
+            <Button
+                android:id="@+id/doublePoints"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_double_powerup"/>
+
+            <TextView
+                android:id="@+id/doublecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:padding="4dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <!-- Troll Powerup -->
+        <FrameLayout
+            android:id="@+id/frameTroll"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_toRightOf="@id/frameDoublePoints"
+            android:layout_marginStart="10dp">
+
+            <Button
+                android:id="@+id/troll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_troll_powerup"/>
+
+            <TextView
+                android:id="@+id/trollcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:padding="4dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

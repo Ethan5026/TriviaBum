@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CreditsActivity">
+
+
+    <Button
+        android:id="@+id/credits_back_button"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:text="Back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/credits_member1"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_marginTop="10sp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Carter Bebee - Frontend" />
+
+            <TextView
+                android:id="@+id/credits_member1_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As a frontend Android Studio developer, Carter mainly worked on developing the 'Playing the Game' functionality with a websocket connection updating a player's score, questions, question types, and powerups. and implementing the Web Socket Controller with the Global Chat and Gameplay. Carter also worked on many UI design elements such as moving texts and changing background elements."
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/credits_member2"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10sp"
+                android:text="Ethan Gruening - Frontend" />
+
+            <TextView
+                android:id="@+id/credits_member2_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As a frontend Android Studio developer, Ethan worked on the handling of the user objects such as logging in, signing up, editting a user account, user control as an admin, querying for the leaderboard and stats page, and page privleges within the app. Ethan also worked on the handling of the clans object within the admin control of clans as well as the clan page. Additionally, he configured the profile, edit profile pages, and help chat pages."
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/credits_member3"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10sp"
+                android:text="Yonas Tesfa - Backend" />
+
+            <TextView
+                android:id="@+id/credits_member3_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="I handled a lot of backend work for this app. I handled a ton of the table relatationships and updated database values. I make sure the frontend display can get the data they need to make the app work. In specific I did a ton with the questions, user friendslists and powerups. As a side note, I like Football (Soccer), Basketball and Counter Strike."
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/credits_member4"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10sp"
+                android:text="Eric Vo - Backend" />
+
+            <TextView
+                android:id="@+id/credits_member4_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As a backend developer, my main focus was getting the database set up with the user, profile, leaderboard, and organization tables along with the help chat and the clan chat. The user table was set up to hold users and their stats along with relationships to their clans, friends, and profile. The profile table was used for additional information for each user including profile pictures, bios, and names. The organization table was our clan table where users were able to join a clan and communicate with each other through their clan's chat and were also able to compare stats amongst one another. The leaderboard table was to hold the leaderboards between all users, friends, and clans. Along with these tables, I also created a help chat where users could join a queue and an admin would take the top user from the queue and put them into a private chat."
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

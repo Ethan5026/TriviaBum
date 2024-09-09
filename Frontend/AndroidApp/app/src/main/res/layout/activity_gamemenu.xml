@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/creatorButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/divider1"
+        android:layout_centerHorizontal="true"
+        android:text="Create" />
+
+    <Button
+        android:id="@+id/accountButton"
+        android:layout_toRightOf="@id/backButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:text="Account"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/myProfileButton"
+        android:layout_toRightOf="@id/accountButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:text="Profile" />
+
+    <Button
+        android:id="@+id/statsButton"
+        android:layout_toRightOf="@id/myProfileButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="1dp"
+        android:textSize="12sp"
+        android:text="Stats" />
+
+    <TextView
+        android:id="@+id/menuTitle"
+        android:layout_below="@id/accountButton"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Game Menu"
+        android:textSize="30sp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/menuTitle"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/genreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Select Type"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/genreSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/genreTitle"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:entries="@array/genre_array" />
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/genreSpinner"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/divider1"
+        android:layout_centerHorizontal="true"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/leaderboardButton"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/divider1"
+        android:textSize="10dp"
+        android:layout_marginStart="300dp"
+        android:text="Leaderboard" />
+
+    <Button
+        android:id="@+id/chatButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/helpButton"
+        android:layout_alignStart="@id/backButton"
+        android:layout_marginTop="15dp"
+        android:text="Chat" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/divider1"
+        android:layout_alignStart="@id/backButton"
+        android:text="Help" />
+
+    <Button
+        android:id="@+id/adminButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/startButton"
+        android:layout_alignStart="@id/statsButton"
+        android:layout_toRightOf="@id/chatButton"
+        android:layout_marginTop="15dp"
+        android:text="Admin" />
+    <Button
+        android:id="@+id/clansButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/startButton"
+        android:layout_alignStart="@id/startButton"
+        android:layout_toRightOf="@id/chatButton"
+        android:layout_marginTop="15dp"
+        android:text="Clan" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@id/clansButton"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/friendsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:text="Friends"
+        android:textSize="23sp" />
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:id="@+id/scroller"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/friendsTitle">
+
+
+        <RelativeLayout
+            android:layout_width="360dp"
+            android:layout_height="48dp">
+
+            <!-- Search EditText -->
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:hint="Search"
+                android:layout_marginTop="10dp"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/addbutton"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/searchEditText"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/removebutton"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10sp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/addbutton"
+                android:layout_below="@id/searchEditText"
+                android:text="Remove" />
+            <Button
+                android:id="@+id/profilebutton"
+                android:layout_width="100dp"
+                android:layout_marginLeft="10sp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@id/removebutton"
+                android:layout_below="@id/searchEditText"
+                android:text="Profile" />
+
+            <Spinner
+                android:id="@+id/playerListView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/addbutton"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/scroller"
+        android:contentDescription="Logo"
+        android:src="@drawable/triviabum"
+        />
+
+    <TextView
+        android:id="@+id/guestTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clansButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Create an Account to see more!"
+        android:textSize="18sp" />
+
+</RelativeLayout>
